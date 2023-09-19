@@ -42,9 +42,7 @@ class _MusicPageState extends State<MusicPage> {
           ),
           IconButton(
             onPressed: () {
-              if (playing) {
-                pauseMusic();
-              }
+              playing ? pauseMusic() : playOfflineMusic();
               setState(() {
                 playing = !playing;
               });
